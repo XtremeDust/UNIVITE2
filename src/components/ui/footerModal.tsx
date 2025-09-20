@@ -10,7 +10,7 @@ export interface PropsModal{
 
  export function FooterModal({BTmain, BTSecond,onClose,...props}:PropsModal){
     return(
-        <div className="footer-modal space-x-[28rem]" {...props}>
+        <div className="footer-modal flex justify-between" {...props}>
 
             <Button variant={"btn-secondary"} onClick={onClose}>
                 {BTSecond}

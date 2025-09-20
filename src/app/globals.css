@@ -101,9 +101,9 @@ body {
 }
 
 .btn-danger{
-  @apply text-[18px] text-white lg:text-[20px] transition-all duration-300 hover:scale-105 hover:bg-red-400 bg-red-500 px-3 py-1
+  @apply text-[13px] text-white  transition-all duration-300 hover:scale-105 hover:bg-red-500 hover:opacity-100 opacity-50 bg-red-600 px-2.5 py-1
 }
 
 .input-text{
-  @apply w-sm focus:ring-[1px] focus:ring-unimar focus:outline-none ring ring-gray-200  shadow-md bg-white rounded-md items-start
+  @apply focus:ring-[1px] focus:ring-unimar focus:outline-none ring ring-gray-200  shadow-md bg-white rounded-md items-start
 }

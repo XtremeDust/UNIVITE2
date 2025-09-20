@@ -6,7 +6,8 @@ export default function Comment() {
     const [OpenModal, setModal] = useState(false);
 
     const handleOpenModal=()=>{
-        setModal(true)    
+        setModal(true)  
+          
     };
 
     const handleCloseModal=()=>{
@@ -32,41 +33,32 @@ export default function Comment() {
 
                 <Modal state={OpenModal}>
                     {OpenModal &&(
-                        <ContainModal className="space-y-12">
+                        <ContainModal className="space-y-10 w-sm sm:w-xl max-h-5/6 min-w-72 min-h-72">
                             
-                            <HeaderModal onClose={handleCloseModal}>Buzon de Comentarios</HeaderModal>
-                            {/*
-                            
-                            <div className="flex flex-nowrap w-full header-modal items-center justify-center">
-                                <div className=" w-full">
-                                    Comentario
-                                </div>                            
-                                <Button variant={"btn-danger"} className="rounded-full" onClick={handleCloseModal}>X</Button>                            
-                            </div>
-                            */}
+                            <HeaderModal onClose={handleCloseModal}>Buzon de Comentarios</HeaderModal>                            
 
-                            <div className="main-modal space-y-4">
+                            <div className="main-modal space-y-5">
 
-                                <div className="Email space-y-3 flex flex-col items-center">                                   
+                                <div className="Email gap-3 flex flex-col items-center">
                                     <InputGroup For="Email" label="Correo Institucional" className="items-start"  labelClass="text-[18px]">
-                                        <Input className="input-text" type="text" placeholder="example.1234@unimar.edu.ve"/>
+                                        <Input className="input-text sm:w-sm" type="text" placeholder="example.1234@unimar.edu.ve"/>
                                     </InputGroup>
 
-                                    <div className="Seletion flex flex-row space-x-3 w-sm">
-                                        <InputGroup For="public" label="Publico" className="flex flex-row-reverse gap-2">
+                                    <div className="Seletion flex flex-row space-x-3 sm:w-sm">
+                                        <InputGroup For="public" label="Publico" className={`flex flex-row-reverse gap-2 ${isChecked === 'public'? 'text-black':'text-gray-500'}`}>
                                             <Input id="public" type="radio" name="correo" value="public" checked={isChecked === 'public'} onChange={handleChange}/>
                                         </InputGroup>
 
-                                        <InputGroup For="private" label="Anonimo" className="flex flex-row-reverse gap-2">
+                                        <InputGroup For="private" label="Anonimo" className={`flex flex-row-reverse gap-2 ${isChecked === 'private'? 'text-black':'text-gray-500'}`}>
                                             <Input id="private" type="radio" name="correo" value="private" checked={isChecked === 'private'} onChange={handleChange}/>
                                         </InputGroup>
                                     
                                     </div>
-                                        <span className={`text-[16px] w-sm text-justify ${isChecked==='public' ? 'flex': 'hidden'}`}>
+                                        <span className={`text-[16px] sm:w-sm text-justify ${isChecked==='public' ? 'flex': 'hidden'}`}>
                                             Su informacion de usuario podra ser vista en la seccion de comentarios
                                         </span>
 
-                                        <span className={`text-[16px] w-sm text-justify ${isChecked==='private' ? 'block': 'hidden'}`}>
+                                        <span className={`text-[16px] sm:w-sm text-justify ${isChecked==='private' ? 'block': 'hidden'}`}>
                                             Su informacion de usuario no sera vista en la seccion de comentarios
                                         </span>
 
@@ -74,7 +66,7 @@ export default function Comment() {
 
                                 <div className="Coment flex place-content-center">
                                     <InputGroup label="Comentario" For="Coment" className="items-start"  labelClass="text-[18px]">
-                                        <TextArea className="w-sm h-[12rem]"/>
+                                        <TextArea className="sm:w-sm h-[12rem]"/>
                                     </InputGroup>
                                 </div>
 
