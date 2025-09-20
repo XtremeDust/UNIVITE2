@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-unimar: #0d4d98;  
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-unimar: var(--color-unimar);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.animate-spin-gradient{
+  height: 110%;
+  width: 110%;
+  background: conic-gradient(from 0deg, white 60%, #0077ff 70%, white 80%);
+  animation: rotate 5s linear infinite;
+  opacity: 1;
+}
+
+@keyframes rotate{
+  0%{
+    transform: 
+    translateX(-50px)
+    rotate(0deg);
+  }
+  50%{
+    transform:
+    translateX(0px)
+        rotate(180deg);
+  }
+100%{
+    transform:
+    translateX(-20px)
+        rotate(360deg);
+  }
+}
+
+.left{
+  animation: left 20s linear infinite ;
+}
+
+@keyframes left{
+  from{
+    transform: translateX(100%);
+  }
+  to{
+    transform: translateX(-80%);
+  }
+}
+
+.animate-scroll-left{
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  from{
+    transform: translateX(0%);
+  }
+  to{
+    transform: translateX(-25%);
+  }  
+}
+
+.animate-scroll-rigth{
+    animation: scroll-rigth 15s linear infinite;
+}
+
+@keyframes scroll-rigth {
+  from{
+    transform: translateX(-25%);
+  }
+  to{
+    transform: translateX(0%);
+  }  
+}
+
+.btn-primary{
+  @apply text-[18px] text-white lg:text-[20px] rounded-xl transition-all duration-300 hover:scale-105 bg-unimar py-2 px-4
+}
+
+.btn-secondary{
+  @apply text-[18px] text-white lg:text-[20px] rounded-xl transition-all duration-300 hover:bg-gray-400 bg-gray-500 px-4 py-2       
+}
+
+.btn-danger{
+  @apply text-[18px] text-white lg:text-[20px] transition-all duration-300 hover:scale-105 hover:bg-red-400 bg-red-500 px-3 py-1
+}
+
+.input-text{
+  @apply w-sm focus:ring-[1px] focus:ring-unimar focus:outline-none ring ring-gray-200  shadow-md bg-white rounded-md items-start
+}
