@@ -1,5 +1,6 @@
+export {Avatar} from "@/components/ui/Avatar"
 export {Button} from "@/components/ui/Button";
-export {Modal} from "@/components/ui/modal"
+export {Modal} from "@/components/ui/Modal"
 export {HeaderModal} from "@/components/ui/headerModal"
 export {ContainModal} from "@/components/ui/containModal"
 export {FooterModal} from "@/components/ui/footerModal"

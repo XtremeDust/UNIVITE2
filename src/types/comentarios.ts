@@ -9,7 +9,7 @@ export const coments = [
     {
         id:1 ,
         name:'Johny Granado',
-        avatar:'/placeholder.svg',
+        email:'jgranado@unimar.edu.ve',
         rol:'estudiante',
         date:'15/08/2025',
        
@@ -17,7 +17,7 @@ export const coments = [
     },{
         id: 2,
         name:'Jose antonio',
-        avatar:'/placeholder.svg',
+        email:'jantonio@unimar.edu.ve',
         rol:'profesor',
         date:'15/08/2025',
         
@@ -25,7 +25,7 @@ export const coments = [
     },{
         id: 3,
         name:'null',
-        avatar:'/placeholder.svg',
+        email:'null',
         rol:'null',
         date:'15/08/2025',
         
@@ -33,7 +33,7 @@ export const coments = [
     },{
         id: 4,
         name:'null',
-        avatar:'/placeholder.svg',
+        email:'null',
         rol:'null',
         date:'15/08/2025',
         
@@ -41,7 +41,7 @@ export const coments = [
     },{
         id: 5,
         name:'null',
-        avatar:'/placeholder.svg',
+        email:'null',
         rol:'null',
         date:'15/08/2025',
         
@@ -49,7 +49,7 @@ export const coments = [
     },{
         id: 6,
         name:'null',
-        avatar:'/placeholder.svg',
+        email:'null',
         rol:'null',
         date:'15/08/2025',
         
@@ -58,7 +58,7 @@ export const coments = [
     ,{
         id: 7,
         name:'null',
-        avatar:'/placeholder.svg',
+        email:'null',
         rol:'null',
         date:'15/08/2025',
         

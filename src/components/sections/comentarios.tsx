@@ -1,4 +1,5 @@
 'use client'
+import {Avatar} from "@/types/ui_components"
 import {indicadorProps, coments} from "@/types/comentarios"
 
     export default function Comentars({mayor, menor}:indicadorProps){
@@ -9,8 +10,8 @@ import {indicadorProps, coments} from "@/types/comentarios"
                     {(coment.id>mayor && coment.id<menor) &&(
                         <div key={coment.id} className={` h-full w-sm md:w-md p-2 space-y-3 place-content-center place-items-center `}>
                             <div className="flex flex-row space-x-3 items-center w-full px-2 ">
-                                <div className={` bg-gray-400 size-10 rounded-full`}>
-                                    <img src={coment.avatar} alt="logo" />
+                                <div className={` bg-gray-400 size-10 rounded-full overflow-hidden flex place-content-center-safe items-center`}>
+                                    <Avatar email={coment.email}/>                                
                                 </div>
                                 <div className="flex flex-wap space-x-2">
                                     <h3 className="font-bold">{(coment.name ==='null' ? 'Anonimo' : coment.name)}</h3> {/* este apartado puede ser sacado del correo? */} <h4>{(coment.rol ==='null' ? '' : coment.rol)}</h4> <span className="opacity-70">{coment.date}</span>

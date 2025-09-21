@@ -5,9 +5,17 @@ import {univita} from '@/types/univita'
 
 export default function Univita() {
   return (
-    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-unimar text-white space-y-10'>
+    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-[#000EA1] text-white space-y-10'>
         <section className='Univita flex flex-col xl:flex-row place-items-center p-2 gap-5 mt-5 '>
-          <img src="#" alt="logo" className='bg-gray-500 w-sm sm:w-[32rem] h-[24rem] rounded-2xl' />
+          
+          <Image
+            className='bg-transparent w-sm sm:w-[26rem] h-[22rem] rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500'
+            src={"https://res.cloudinary.com/dnfvfft3w/image/upload/v1758471006/logo_ev8dso.png"}
+            alt='logo'
+            width={700}
+            height={700}
+          />
+
           <div className='texto w-sm sm:w-[32rem] h-[12rem] md:w-[48rem] xl:w-[40rem] 2xl:w-[48rem] place-content-center text-justify'>
             <h3 className='text-[3rem]'>Univita</h3>
              <p className='text-[18px] ml-3 p-1'>                
