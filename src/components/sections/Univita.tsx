@@ -1,7 +1,9 @@
+'use client'
 import React from 'react'
 import Image from "next/image";
-import {Card,CardImg} from '@/types/ui_components'
+import {Card} from '@/types/ui_components'
 import {univita} from '@/types/univita'
+import {ActiveLink} from "@/components/ui/Router";
 
 export default function Univita() {
   return (
@@ -26,17 +28,18 @@ export default function Univita() {
         </section>
         <section className=' otros flex flex-wrap xl:gap-10 justify-center place-items-center w-full h-full mb-10'>
           {univita.map((card)=>(
-            <Card key={`${card.id}`} className='grid grid-row rounded-none place-items-center space-y-3 group
-                     border-dashed not-last:border-b-2 first:border-b-2 not-last:border-0 md:not-first:odd:border-b-0 md:odd:border-r-2 xl:not-last:border-0 xl:not-last:border-r-2'>
-                <Image
-                     className="group-hover:scale-115 transition-all duration-300 ease-in-out"
-                     src={card.img}
-                     width={105}
-                     height={105}
-                     alt={card.title}
-                     /> 
-                <h3 className='text-[18px]'>{card.title}</h3>
-            </Card>
+            <Card key={card.id} className='relative grid grid-row rounded-none group border-dashed not-last:border-b-2 first:border-b-2 not-last:border-0 md:not-first:odd:border-b-0 md:odd:border-r-2 xl:not-last:border-0 xl:not-last:border-r-2'>
+                <ActiveLink href={card.url} className='absolute inset-0 z-0 click space-y-3 place-items-center place-content-center'>
+                      <Image
+                          className="group-hover:scale-115 transition-all duration-300 ease-in-out"
+                          src={card.img}
+                          width={105}
+                          height={105}
+                          alt={card.title}
+                          /> 
+                      <h3 className='text-[18px]'>{card.title}</h3>
+                </ActiveLink>
+              </Card>
           ))}
           
           

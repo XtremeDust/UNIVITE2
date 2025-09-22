@@ -1,16 +1,15 @@
-import React, { useRouter } from 'next/router'
+
+import { useRouter } from 'next/navigation'
 
 export interface RouterProps{
     children:React.ReactNode;
     href:string;
+    className:string;
 }
 
-function ActiveLink({ children, href }:RouterProps) {
-  const router = useRouter()
-  const style = {
-    marginRight: 10,
-    color: router.asPath === href ? 'red' : 'black',
-  }
+export function ActiveLink({ children, href, className,...props }:RouterProps) {
+  const router = useRouter();
+
  
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -18,7 +17,7 @@ function ActiveLink({ children, href }:RouterProps) {
   }
  
   return (
-    <a href={href} onClick={handleClick} style={style}>
+    <a href={href} onClick={handleClick} {...props} className={` ${className}`}>
       {children}
     </a>
   )

@@ -12,7 +12,7 @@ import {featS} from "@/types/feactures";
         <div className=" p-3 text-black">
             <div className=" text-[20px] md:text-3xl font-medium flex flex-col gap-1">
                 <h2 className="lg:text-4xl font-mono">Vive la Nueva Experiencia del Deporte</h2>
-                <span className="ml-5 text-justify">Algo colocare despues</span>
+                <span className="ml-5 text-justify text-[16px] md:text-[18px]">Inscríbete en eventos, consulta cronogramas, accede a normativas y sigue resultados todo desde tu portal favorito. Univita centraliza las herramientas para que participar sea simple y rápido.</span>
             </div>
             <div className="flex flex-wrap justify-evenly gap-5 p-3 mt-5 group">
                 {featS.map((events, index)=>(
