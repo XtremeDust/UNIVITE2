@@ -7,7 +7,7 @@ interface CardProps{
 
 export function Card({children, className, ...props}:CardProps) {
   return (
-    <div className={`Card flex flex-row place-content-center items-center h-[16rem] w-sm sm:w-9/12 md:w-5/11 xl:w-[18rem]  2xl:w-[21rem]  rounded-2xl group ${className}`} {...props}
+    <div className={` place-content-center items-center  transition-all duration-500 ease-in-out rounded-2xl group ${className}`} {...props}
     >
             {children}
     </div>

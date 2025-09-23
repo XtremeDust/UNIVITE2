@@ -3,14 +3,15 @@ import {Button} from "@/types/ui_components";
 
 export interface PropsModal{
     BTmain:string;
+    className:string;
     //onSumit:()=>void;
     BTSecond:string;
     onClose:()=>void;
 }
 
- export function FooterModal({BTmain, BTSecond,onClose,...props}:PropsModal){
+ export function FooterModal({BTmain, BTSecond, className ,onClose,...props}:PropsModal){
     return(
-        <div className="footer-modal flex justify-between" {...props}>
+        <div className={`ooter-modal flex justify-between ${className}`} {...props}>
 
             <Button variant={"btn-secondary"} onClick={onClose}>
                 {BTSecond}

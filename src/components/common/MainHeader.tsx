@@ -2,11 +2,11 @@
 'use client'
 import Redes from "@/components/common/socialMedia";
 import {pago} from "@/types/headerSection";
-import Accordeon from "@/components/header/accordionMH"
+import Accordeon from "@/components/common/accordionMH"
 import React, {useState} from "react";
 import Image from "next/image";
 
-import MenuDropdown from "@/components/header/menuDropdown";
+import MenuDropdown from "@/components/common/menuDropdown";
 
 function Header(){
 
@@ -27,8 +27,8 @@ let date: Date=new Date();
                   alt={'info'}
             />
             <p className=" flex flex-none gap-1">
-             El valor del dólar, para el día de hoy {`${date.getUTCDate()}/${date.getUTCMonth()+1}/${date.getUTCFullYear()}`}
-             <span> fecha es </span>
+              El valor del dólar, según el BCV, para el día de hoy {`${date.getUTCDate()}/${date.getUTCMonth()+1}/${date.getUTCFullYear()}`}
+             <span> es </span>
               <strong> precio </strong> Bs
             </p>
             </section>

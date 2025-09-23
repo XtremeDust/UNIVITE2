@@ -7,8 +7,8 @@ import {ActiveLink} from "@/components/ui/Router";
 
 export default function Univita() {
   return (
-    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-[#000EA1] text-white space-y-10'>
-        <section className='Univita flex flex-col xl:flex-row place-items-center p-2 gap-5 mt-5 '>
+    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-[#000EA1] text-white space-y-20 lg:space-y-10'>
+        <section className='Univita flex flex-col xl:flex-row place-items-center p-2 gap-5 mt-5'>
           
           <Image
             className='bg-transparent w-sm sm:w-[26rem] h-[22rem] rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500'
@@ -26,10 +26,10 @@ export default function Univita() {
               </p> 
           </div>
         </section>
-        <section className=' otros flex flex-wrap xl:gap-10 justify-center place-items-center w-full h-full mb-10'>
+        <section className='otros flex flex-wrap xl:gap-10 justify-center place-items-center w-full h-full mb-10'>
           {univita.map((card)=>(
-            <Card key={card.id} className='relative grid grid-row rounded-none group border-dashed not-last:border-b-2 first:border-b-2 not-last:border-0 md:not-first:odd:border-b-0 md:odd:border-r-2 xl:not-last:border-0 xl:not-last:border-r-2'>
-                <ActiveLink href={card.url} className='absolute inset-0 z-0 click space-y-3 place-items-center place-content-center'>
+            <Card key={card.id} className='flex flex-row rounded-none group border-dashed not-last:border-b-2 first:border-b-2 not-last:border-0 md:not-first:odd:border-b-0 md:odd:border-r-2 xl:not-last:border-0 xl:not-last:border-r-2 2xl:w-[21rem] card-small'>
+                <ActiveLink href={card.url} className='w-full h-full space-y-3 place-items-center place-content-center p-6'>
                       <Image
                           className="group-hover:scale-115 transition-all duration-300 ease-in-out"
                           src={card.img}
@@ -41,9 +41,6 @@ export default function Univita() {
                 </ActiveLink>
               </Card>
           ))}
-          
-          
-         
         </section>
       
     </div>

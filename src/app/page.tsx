@@ -1,7 +1,7 @@
 import { Inconsolata, Literata } from "next/font/google";
 import Image from "next/image";
-import Header from "@/components/header/MainHeader";
-import Footer from "@/components/footer/MainFooter";
+import Header from "@/components/common/MainHeader";
+import Footer from "@/components/common/MainFooter";
 import Banner from "@/components/sections/banner";
 import Features from "@/components/sections/featuresSection";
 import Comentsection from "@/components/sections/comentSection";

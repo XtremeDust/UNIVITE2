@@ -3,7 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --color-unimar: #0d4d98;  
+  --color-unimar: #0d4e98;
+  --color-trasparent-unimar: #0f335c3a;  
 }
 
 @theme inline {
@@ -12,6 +13,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-unimar: var(--color-unimar);
+  --color-trasparent-unimar: var(--color-trasparent-unimar);  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -106,4 +108,8 @@ body {
 
 .input-text{
   @apply focus:ring-[1px] focus:ring-unimar focus:outline-none ring ring-gray-200  shadow-md bg-white rounded-md items-start
+}
+
+.card-small{
+  @apply w-sm sm:w-9/12 md:w-5/11 xl:w-[18rem]  
 }

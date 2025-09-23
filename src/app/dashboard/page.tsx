@@ -2,8 +2,8 @@ import { Inconsolata, Literata } from "next/font/google";
 import Image from "next/image";
 import { url } from "inspector";
 import { title } from "process";
-import Header from "@/components/header/MainHeader";
-import Footer from "@/components/footer/MainFooter";
+import Header from "@/components/common/MainHeader";
+import Footer from "@/components/common/MainFooter";
 
 export default function Home() {
   return (

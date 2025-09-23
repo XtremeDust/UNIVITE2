@@ -4,15 +4,16 @@ import {Button} from "@/types/ui_components"
  export interface PropsModal {
     children: React.ReactNode;
     onClose:()=>void;
+    className:string;
 }
 
- export function HeaderModal({children,onClose,...props}:PropsModal){
+ export function HeaderModal({children,className,onClose,...props}:PropsModal){
     return(
-        <div className="flex flex-col header-modal items-end justify-center" {...props}>
+        <div className={`flex flex-col header-modal items-end justify-center ${className}`} {...props}>
             <Button variant={"btn-danger"} className="rounded-full" onClick={onClose}>X</Button>                            
-            <div className="text-center w-full">
+            <div className="text-center w-full text-[1.5rem]">
                 {children}
             </div>                            
-        </div>
+        </div> 
     );
  }export default HeaderModal

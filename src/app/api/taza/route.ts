@@ -1,13 +1,12 @@
+
 import { NextResponse } from "next/server";
-
-
-export const runtime="nodejs";
+import {parse} from 'node-html-parser'
 export const dynamic = 'force-dynamic';
 
 export async function GET(req: Request){
     try{
         //url pag
-        const url = "https://portalunimar.unimar.edu.ve";
+        const url = "https://www.bcv.org.ve/";
         console.log("url", url);
         
         //no guardamos cache
@@ -18,24 +17,24 @@ export async function GET(req: Request){
       throw new Error(`Fallo en la petición con el código de estado: ${res.status}`);
     }
 
+    //cargamos html
         const data = await res.text();
         console.log("html", data.length);
-        //importa cheerio dinamicamente pq Turbopack tiene problemas con el 
-        const cheerio = await import("cheerio");
-        //cargamos html
-        const $ = cheerio.load(data);
-
+        const load = parse(data);
 
         //buscamos elemento
-        const dolar = $("#dollar-bcv-price").text().trim();
+        const dolarElement = load.querySelector("#dolar field-content recuadrotsmc centrado strong"); 
+        
+        const dolar = dolarElement.text.trim(); 
         console.log("dolar",dolar);
+
         
            if (!dolar) {
       throw new Error('No se encontró el elemento con el ID #dollar-bcv-price');
     }
         
         //damos formato (12.12 en vez de 12,12
-        const value = parseFloat(dolar.replace(',','.'))
+          const value = parseFloat(dolar.replace(',', '.'));
         
         if (isNaN(value)) {
       throw new Error('El valor extraído no es un número válido.');

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {sectionH} from "../../types/headerSection";
-import Arrow from "../common/ArrowIcon";
+import Arrow from "./ArrowIcon";
 
  export default function menuDropdown(){
 
