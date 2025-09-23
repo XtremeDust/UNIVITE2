@@ -3,7 +3,7 @@ import {Button} from "@/types/ui_components";
 
 export interface PropsModal{
     BTmain:string;
-    className:string;
+    className?:string;
     //onSumit:()=>void;
     BTSecond:string;
     onClose:()=>void;

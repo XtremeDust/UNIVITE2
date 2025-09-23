@@ -4,7 +4,7 @@ import {Button} from "@/types/ui_components"
  export interface PropsModal {
     children: React.ReactNode;
     onClose:()=>void;
-    className:string;
+    className?:string;
 }
 
  export function HeaderModal({children,className,onClose,...props}:PropsModal){

@@ -4,7 +4,7 @@ import Banner from "@/components/sections/banner";
 import ButtonInscription from "@/components/sections/ButtonInscription";
 
 
-export function inscription(){
+export default function inscription(){
     return(
         <div className='grid grid-rows-[auto_1fr_auto] min-h-dvh bg-white'>
             <Header/>
@@ -15,4 +15,4 @@ export function inscription(){
             <Footer/>
         </div>
     );
-}export default inscription;
+}

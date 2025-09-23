@@ -4,7 +4,7 @@ import Header from "@/components/common/MainHeader";
 import Banner from "@/components/sections/banner";
 import Sport from "@/components/sections/Sport";
 
-export function reglamentos(){
+export default function reglamentos(){
     return(
         <div className='grid grid-rows-[auto_1fr_auto] min-h-dvh bg-white'>
             <Header/>
@@ -15,4 +15,4 @@ export function reglamentos(){
             <Footer/>
         </div>
     );
-} export default reglamentos;
+}
