@@ -39,64 +39,40 @@ export function ButtonInscription(){
                     </div>
                 <Navigation/>
             </section>
+
+
+
              <Modal state={OpenModal}>
                 {OpenModal &&(
                     <ContainModal className="flex flex-col text-black w-md md:w-[68rem] md:h-[54rem] min-w-96 max-w-[64rem] min-h-96 max-h-[64rem]">
                         
                         <HeaderModal className="flex-none" onClose={handleCloseModal}>Registro e Inscripción</HeaderModal>                            
 
-                        <div className="flex-grow main-modal place-content-center space-y-5">
+                        <div className="flex-grow main-modal place-content-center space-y-2">
 
-                            <div>
-                                Deporte
-                                <InputGroup For="Deporte" label="Seleccione el deporte en el cual Va a participar" className="flex flex-wrap"  labelClass="text-[18px]">
-                                    {sports.map((card)=>(
-                                        <Sports
-                                            key={card.id}
-                                            card={card}
-                                            className="flex w-[16rem] "
-                                            state={isSport === card.id}
-                                            onClick={()=>handleClickSport(card.id)}
-                                        />
-                                    ))}
-                                </InputGroup>
-                            </div>
+                            <section className="flex flex-col items-start gap-2">
+                                <h3 className="ml-15 text-[1.2rem]">Seleccione el deporte en el cual va a participar</h3>
+                                    <div className="flex flex-wrap p-2 gap-5 place-content-center">
+                                            {sports.map((card)=>(
+                                                <Sports
+                                                    key={card.id}
+                                                    card={card}
+                                                    className=" w-[15rem] h-[10.5rem] "
+                                                    state={isSport === card.id}
+                                                    onClick={()=>handleClickSport(card.id)}
+                                                />
+                                            ))}
+                                    </div>
+                            </section>
 
-                            <div>
-                                categoria
-                            </div>
-
-                            <div className="Email gap-3 flex flex-col items-center">
-                                <InputGroup For="Email" label="Correo Institucional" className="items-start"  labelClass="text-[18px]">
-                                    <Input className="input-text sm:w-sm" type="text" placeholder="example.1234@unimar.edu.ve"/>
-                                </InputGroup>
-
-                                <div className="Seletion flex flex-row space-x-3 sm:w-sm">
-                                    <InputGroup For="public" label="Publico" className={`flex flex-row-reverse gap-2 ${isChecked === 'public'? 'text-black':'text-gray-500'}`}>
-                                        <Input id="public" type="radio" name="correo" value="public" checked={isChecked === 'public'} onChange={handleChange}/>
-                                    </InputGroup>
-
-                                    <InputGroup For="private" label="Anonimo" className={`flex flex-row-reverse gap-2 ${isChecked === 'private'? 'text-black':'text-gray-500'}`}>
-                                        <Input id="private" type="radio" name="correo" value="private" checked={isChecked === 'private'} onChange={handleChange}/>
-                                    </InputGroup>
-                                
+                            <section className="flex flex-col gap-2">
+                                <h3 className="ml-15  items-start text-start text-[1.2rem]">Seleccione la Categoria en la que va a jugar</h3>
+                                <div className="flex flex-wrap gap-5 place-content-center">
+                                    <Button className="btn-primary">Masculino</Button>
+                                    <Button className="btn-secondary">Feminino</Button>
+                                    <Button className="btn-secondary">Mixto</Button>
                                 </div>
-                                    <span className={`text-[16px] sm:w-sm text-justify ${isChecked==='public' ? 'flex': 'hidden'}`}>
-                                        Su informacion de usuario podra ser vista en la seccion de comentarios
-                                    </span>
-
-                                    <span className={`text-[16px] sm:w-sm text-justify ${isChecked==='private' ? 'block': 'hidden'}`}>
-                                        Su informacion de usuario no sera vista en la seccion de comentarios
-                                    </span>
-
-                            </div>
-
-                            <div className="Coment flex place-content-center">
-                                <InputGroup label="Comentario" For="Coment" className="items-start"  labelClass="text-[18px]">
-                                    <TextArea className="sm:w-sm h-[12rem]"/>
-                                </InputGroup>
-                            </div>
-
+                            </section>
                         </div>
 
                         <FooterModal className="flex-none" BTmain="Next" BTSecond="Cerrar" onClose={handleCloseModal}/>

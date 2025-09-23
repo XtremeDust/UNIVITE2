@@ -11,7 +11,7 @@ export function navigate(){
                 <h2 className="text-[1.9rem] font-mono text-black">Quizas te interece</h2>
                 <div className="flex flex-wrap place-items-center place-content-center gap-3">
                 {univita.map((card)=>(
-                            <Card key={card.id} className={`relative bg-unimar transition-all duration-500 ease-in-out h-[10rem] xl:w-[24rem] 2xl:w-[28rem] ${ruta===card.url ? 'hidden':'visible hover:scale-103'}`}>
+                            <Card key={card.id} className={`relative bg-unimar transition-all duration-500 ease-in-out  h-[12rem] w-9/12  lg:h-[10rem] md:w-5/11 xl:w-[24rem] 2xl:w-[28rem] ${ruta===card.url ? 'hidden':'visible hover:scale-103'}`}>
                                 <ActiveLink href={card.url} className='lg:flex absolute inset-0 z-0 click gap-5 place-items-center place-content-center'>
                                         <div className="p-4 bg-gray-300 rounded-full">
                                     <Image
