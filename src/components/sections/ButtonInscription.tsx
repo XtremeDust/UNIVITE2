@@ -44,7 +44,7 @@ export function ButtonInscription(){
 
              <Modal state={OpenModal}>
                 {OpenModal &&(
-                    <ContainModal className="flex flex-col text-black w-md md:w-[68rem] md:h-[54rem] min-w-96 max-w-[64rem] min-h-96 max-h-[64rem]">
+                    <ContainModal className="flex flex-col text-black w-md sm:w-[40rem] md:w-[68rem] md:h-[54rem] min-w-96 max-w-[64rem] min-h-96 max-h-[64rem] space-y-3">
                         
                         <HeaderModal className="flex-none" onClose={handleCloseModal}>Registro e Inscripción</HeaderModal>                            
 
@@ -57,7 +57,8 @@ export function ButtonInscription(){
                                                 <Sports
                                                     key={card.id}
                                                     card={card}
-                                                    className=" w-[15rem] h-[10.5rem] "
+                                                    className="w-[7rem] sm:w-[10rem] md:w-[15rem] h-[9rem] "
+                                                    classImg="w-[4rem] md:w-[5rem]"
                                                     state={isSport === card.id}
                                                     onClick={()=>handleClickSport(card.id)}
                                                 />

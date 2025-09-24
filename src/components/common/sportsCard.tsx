@@ -4,12 +4,13 @@ import Image from "next/image";
 
 interface SportProps{
     className:string;
+    classImg?:string;
     onClick:()=>void;
     card:card;
     state:boolean;
 }
 
-export function Sports({className, onClick, state, card, ...props}:SportProps){
+export function Sports({className,classImg, onClick, state, card, ...props}:SportProps){
 
     return(
         <Card className={`relative bg-gray-200 grid grid-row text-black shadow-lg  
@@ -17,7 +18,7 @@ export function Sports({className, onClick, state, card, ...props}:SportProps){
                  ${className}`} {...props}>
             <a className="absolute inset-0 z-0 place-content-center place-items-center space-y-3" onClick={onClick}>
                 <Image
-                    className={`transition-all duration-300 ease-in-out ${state ?'scale-115':''}`}
+                    className={`transition-all duration-300 ease-in-out ${classImg} ${state ?'scale-115':''}`}
                     src={card.img}
                     width={105}
                     height={105}

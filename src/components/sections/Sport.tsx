@@ -19,7 +19,7 @@ export function Sport(){
             <div className=" text-[20px] md:text-3xl text-black font-medium flex flex-col gap-1 px-5">
                 <h2 className="lg:text-4xl font-mono">Normativas, guias y reglamentos</h2>
                 <span className="ml-5 text-justify text-[16px] md:text-[18px]">
-                    Mantente informado sobre los partidos y eventos deportivos incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                    Toda gran experiencia deportiva y cultural se construye sobre bases sólidas. Aquí podrás consultar las normativas, guías y reglamentos que orientan nuestra comunidad, asegurando un entorno justo, organizado y transparente donde cada participación suma al espíritu universitario.
                 </span>
             </div>
 
