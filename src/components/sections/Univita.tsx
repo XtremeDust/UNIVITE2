@@ -31,10 +31,10 @@ export default function Univita() {
             <Card key={card.id} className='flex flex-row rounded-none group border-dashed not-last:border-b-2 first:border-b-2 not-last:border-0 md:not-first:odd:border-b-0 md:odd:border-r-2 xl:not-last:border-0 xl:not-last:border-r-2 2xl:w-[21rem] card-small'>
                 <ActiveLink href={card.url} className='w-full h-full space-y-3 place-content-center place-items-center text-center p-6'>
                       <Image
-                          className="group-hover:scale-115 transition-all duration-300 ease-in-out"
+                          className="group-hover:scale-105 transition-all duration-300 ease-in-out w-[8rem] md:w-[10rem] ring-4 ring-white rounded-full"
                           src={card.img}
-                          width={105}
-                          height={105}
+                          width={500}
+                          height={500}
                           alt={card.title}
                           /> 
                       <h3 className='text-[18px]'>{card.title}</h3>

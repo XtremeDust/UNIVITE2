@@ -29,7 +29,7 @@ export function Sport(){
                         <Sports 
                             key={card.id}
                             card={card}
-                            className=" w-sm sm:w-[70%] md:w-[30%] md:h-[12rem] h-[14rem] xl:w-[30%] 2xl:w-2/11"
+                            className=" w-sm sm:w-[70%] md:w-[30%] md:h-[12rem] h-[14rem] xl:w-[30%] 2xl:w-2/11 drop-shadow-md"
                             state={isSport === card.id}
                             onClick={()=>handleClickSport(card.id)}
                         />

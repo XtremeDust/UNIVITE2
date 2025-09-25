@@ -18,7 +18,7 @@ export function Sports({className,classImg, onClick, state, card, ...props}:Spor
                  ${className}`} {...props}>
             <a className="absolute inset-0 z-0 place-content-center place-items-center space-y-3" onClick={onClick}>
                 <Image
-                    className={`transition-all duration-300 ease-in-out ${classImg} ${state ?'scale-115':''}`}
+                    className={`transition-all duration-300 ease-in-out ring-white ring-4 rounded-full ${classImg} ${state ?'scale-109':''}`}
                     src={card.img}
                     width={105}
                     height={105}
