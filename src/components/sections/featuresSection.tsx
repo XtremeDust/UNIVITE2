@@ -16,7 +16,7 @@ import {featS} from "@/types/feactures";
             </div>
             <div className="flex flex-wrap justify-evenly gap-5 p-3 mt-5 group">
                 {featS.map((events, index)=>(
-                    <a key={events.id} href={events.src}className=" lg:h-50 w-full md:w-11/11 lg:w-6/7 xl:w-4/12  2xl:w-[30rem] rounded-2xl flex flex-col gap-1 place-content-center p-[3px] transition-all  duration-500 group-hover:opacity-50 hover:!opacity-100  hover:scale-105  place-items-center overflow-hidden relative "
+                    <a key={events.id} href={events.src}className=" lg:h-50 w-full md:w-11/11 lg:w-6/7 xl:w-[24.5rem]  2xl:w-[30rem] rounded-2xl flex flex-col gap-1 place-content-center p-[3px] transition-all  duration-500 group-hover:opacity-50 hover:!opacity-100  hover:scale-105  place-items-center overflow-hidden relative "
                         onMouseEnter={()=>HoverS(index)} onMouseLeave={()=>HoverS(index)}>
 
                         <div className="flex flex-col md:flex-row xl:flex-col md:justify-start xl:items-start items-center card group hover:bg-unimar hover:text-white bg-gray-100 size-full rounded-2xl p-3 gap-3 place-content-center place-items-center

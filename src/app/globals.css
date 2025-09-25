@@ -82,15 +82,15 @@ body {
 }
 
 .animate-scroll-rigth{
-    animation: scroll-rigth 15s linear infinite;
+    animation: scroll-rigth 25s linear infinite;
 }
 
 @keyframes scroll-rigth {
   from{
-    transform: translateX(-25%);
+    transform: translateX(0%);
   }
   to{
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }  
 }
 

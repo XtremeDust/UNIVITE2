@@ -1,27 +1,28 @@
  "use client"
 import Btcomment from "@/components/sections/ButtonComent";
-import Comentars from "@/components/sections/comentarios";
+import ComentCard from "@/components/sections/comentCard";
+import { coments } from "@/types/comentarios";
 
- export default function univita(){
+ export default function comenSection(){
+    const commentsSubset = coments.slice(0, 6);
+    const duplicatedComments = [...commentsSubset, ...commentsSubset];
     return(
-        <section className="comenSection grid gap-5"> 
+        <section className="comenSection grid "> 
             <section className="comentarios flex flex-col w-full m-0 place-items-center text-center place-content-center space-y-5 overflow-hidden p-1">
                 <div className="text-[20px] md:text-2xl font-medium flex flex-col gap-1">
-                    <h3  className="lg:text-3xl font-mono">Tu opinión tambien importa</h3>
+                    <h3  className="lg:text-3xl ">Tu opinión tambien importa</h3>
                     <p className="ml-5 text-[16px] text-justify">Tu voz es la energía que mueve este proyecto. Cada opinión, cada comentario y cada experiencia compartida nos ayuda a crecer contigo y a construir un deporte universitario más vibrante y lleno de vida.</p>                
                 </div>
 
-                <div className="group space-y-4">
-                    {/*comentarios 1 */}
-                    <div className=" flex flex-nowrap place-content-center gap-5 animate-scroll-rigth">
-                        <Comentars mayor={2} menor={7}/>
-                        <Comentars mayor={2} menor={7}/>
-                    </div>
-
-                    {/*comentarios 2 */}
-                    <div className="flex flex-nowrap place-content-center gap-5 animate-scroll-left ">
-                        <Comentars mayor={0} menor={5}/>
-                        <Comentars mayor={0} menor={5}/>
+                <div className="relative overflow-hidden group w-full">
+                    <div className=" flex p-2 gap-5 animate-scroll-rigth flex-shrink-0">
+                           {duplicatedComments.map((coment, index) => (
+                            <ComentCard 
+                                key={index} 
+                                coment={coment} 
+                                index={index}
+                            />
+                        ))}
                     </div>
                 </div>
                 

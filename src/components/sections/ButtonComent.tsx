@@ -34,18 +34,18 @@ export default function Comment() {
 
                 <Modal state={OpenModal}>
                     {OpenModal &&(
-                        <ContainModal className="space-y-10 w-sm sm:w-xl max-h-5/6 min-w-72 min-h-72">
+                        <ContainModal className="flex flex-col space-y-10 w-sm sm:w-xl max-h-5/6 min-w-80 min-h-72">
                             
-                            <HeaderModal onClose={handleCloseModal}>Buzon de Comentarios</HeaderModal>                            
+                            <HeaderModal onClose={handleCloseModal} className="flex-none">Buzon de Comentarios</HeaderModal>                            
 
-                            <div className="main-modal space-y-5">
+                            <div className="main-modal flex-grow space-y-3 place-items-center">
 
-                                <div className="Email gap-3 flex flex-col items-center">
-                                    <InputGroup For="Email" label="Correo Institucional" className="items-start"  labelClass="text-[18px]">
-                                        <Input className="input-text sm:w-sm" type="text" placeholder="example.1234@unimar.edu.ve"/>
+                                <div className="Email flex items-center gap-2 md:gap-3 flex-col">
+                                    <InputGroup For="Email" label="Correo Institucional" labelClass="text-[18px] text-start">
+                                        <Input id="Email" className="input-text w-[18rem] sm:w-sm" type="text" placeholder="example.1234@unimar.edu.ve"/>
                                     </InputGroup>
 
-                                    <div className="Seletion flex flex-row space-x-3 sm:w-sm">
+                                    <div className="Seletion flex flex-row space-x-3  w-[18rem] sm:w-sm">
                                         <InputGroup For="public" label="Publico" className={`flex flex-row-reverse gap-2 ${isChecked === 'public'? 'text-black':'text-gray-500'}`}>
                                             <Input id="public" type="radio" name="correo" value="public" checked={isChecked === 'public'} onChange={handleChange}/>
                                         </InputGroup>
@@ -55,25 +55,25 @@ export default function Comment() {
                                         </InputGroup>
                                     
                                     </div>
-                                        <span className={`text-[16px] sm:w-sm text-justify ${isChecked==='public' ? 'flex': 'hidden'}`}>
+                                        <span className={`text-[16px] w-[18rem] sm:w-sm text-justify ${isChecked==='public' ? 'flex': 'hidden'}`}>
                                             Su informacion de usuario podra ser vista en la seccion de comentarios
                                         </span>
 
-                                        <span className={`text-[16px] sm:w-sm text-justify ${isChecked==='private' ? 'block': 'hidden'}`}>
+                                        <span className={`text-[16px] w-[18rem] sm:w-sm text-justify ${isChecked==='private' ? 'block': 'hidden'}`}>
                                             Su informacion de usuario no sera vista en la seccion de comentarios
                                         </span>
 
                                 </div>
 
-                                <div className="Coment flex place-content-center">
-                                    <InputGroup label="Comentario" For="Coment" className="items-start"  labelClass="text-[18px]">
-                                        <TextArea className="sm:w-sm h-[12rem]"/>
+                                <div className="Coment flex items-start md:items-center">
+                                    <InputGroup label="Comentario" For="Coment" labelClass="text-[18px] text-start ">
+                                        <TextArea id="Coment" className="w-[18rem] sm:w-sm h-[12rem]"/>
                                     </InputGroup>
                                 </div>
 
                             </div>
 
-                           <FooterModal BTmain="Enviar" BTSecond="Cerrar" onClose={handleCloseModal}/>
+                           <FooterModal BTmain="Enviar" BTSecond="Cerrar" onClose={handleCloseModal} className="flex-none"/>
                                 
                            
                         </ContainModal>
