@@ -7,20 +7,21 @@ import {ActiveLink} from "@/components/ui/Router";
 
 export default function Univita() {
   return (
-    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-[#000EA1] text-white lg:space-y-10'>
+    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-univita text-white lg:space-y-10'>
         <section className='Univita flex flex-col xl:flex-row place-items-center p-2 gap-5 mt-5'>
-          
-          <Image
-            className='bg-transparent w-sm sm:w-[21rem] h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500'
-            src={"https://res.cloudinary.com/dnfvfft3w/image/upload/v1758471006/logo_ev8dso.png"}
-            alt='logo'
-            width={700}
-            height={700}
-          />
+          <ActiveLink href='/login'>
+            <Image
+              className='bg-transparent w-sm sm:w-[21rem] h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500'
+              src={"https://res.cloudinary.com/dnfvfft3w/image/upload/v1758471006/logo_ev8dso.png"}
+              alt='logo'
+              width={700}
+              height={700}
+            />
+          </ActiveLink>
 
           <div className='texto w-sm sm:w-[32rem] md:w-[48rem] xl:w-[40rem] 2xl:w-[49rem] place-content-center text-justify'>
-            <h3 className='text-[3rem]'>Univita</h3>
-             <p className='text-[18px] ml-3 p-1'>                
+            <h3 className='text-[1.5rem] md:text-[2rem] xl:text-[2.5rem] font-bold'>Univita</h3>
+             <p className='text-[18px] md:ml-3 p-1.5'>                
                 Bienvenido a Univita, el nuevo capítulo de la Universidad de Margarita se escribe a través de este módulo: un bastión de eficiencia forjado para la excelencia. Es la plataforma que consolida el espíritu de comunidad, la energía del deporte y la riqueza de la cultura bajo una misma arquitectura digital, garantizando que cada registro, evento y logro se convierta en parte de la historia de nuestra casa de estudios.
               </p> 
           </div>

@@ -1,6 +1,7 @@
 import Footer from '@/components/common/MainFooter';
 import Header from '@/components/common/MainHeader';
 import Banner from '@/components/sections/banner';
+import Events from '@/components/sections/events';
 
 export default function events(){
     return(
@@ -8,7 +9,7 @@ export default function events(){
             <Header/>
                 <main className='bg-gray-50'>
                     <Banner/>
-                    
+                    <Events/>
                 </main>
             <Footer/>
         </div>

@@ -10,7 +10,7 @@ import {Button} from "@/types/ui_components"
  export function HeaderModal({children,className,onClose,...props}:PropsModal){
     return(
         <div className={`flex flex-col header-modal items-end justify-center ${className}`} {...props}>
-            <Button variant={"btn-danger"} className="rounded-full" onClick={onClose}>X</Button>                            
+            <Button variant={"btn-back"} className="rounded-full" onClick={onClose}>X</Button>                            
             <div className="text-center w-full text-[1.5rem]">
                 {children}
             </div>                            

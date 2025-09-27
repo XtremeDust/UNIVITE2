@@ -10,7 +10,7 @@ export interface PropsLabel{
 
 export  function InputGroup({label,labelClass,For,className,children,...props}:PropsLabel){
     return(
-        <div className={`input flex flex-col ${className}`} {...props}>
+        <div className={` flex flex-col ${className}`} {...props}>
             {label &&(
                 <label htmlFor={For} className={`text-[16px] font-medium ${labelClass}`}>
                     {label}

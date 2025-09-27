@@ -4,19 +4,21 @@ import ComentCard from "@/components/sections/comentCard";
 import { coments } from "@/types/comentarios";
 
  export default function comenSection(){
-    const commentsSubset = coments.slice(0, 6);
-    const duplicatedComments = [...commentsSubset, ...commentsSubset];
+    //elemnto para mapear de 0 a 6 elementos const commentsSubset = coments.slice(0, 6);
+    //elemnto para mapear duplicar const duplicatedComments = [...commentsSubset, ...commentsSubset];
     return(
-        <section className="comenSection grid "> 
-            <section className="comentarios flex flex-col w-full m-0 place-items-center text-center place-content-center space-y-5 overflow-hidden p-1">
-                <div className="text-[20px] md:text-2xl font-medium flex flex-col gap-1">
-                    <h3  className="lg:text-3xl ">Tu opinión tambien importa</h3>
-                    <p className="ml-5 text-[16px] text-justify">Tu voz es la energía que mueve este proyecto. Cada opinión, cada comentario y cada experiencia compartida nos ayuda a crecer contigo y a construir un deporte universitario más vibrante y lleno de vida.</p>                
+        <section className="comenSection gap-6 bg-transparent my-2"> 
+            <section className="flex flex-col w-full m-0 place-items-center text-center place-content-center overflow-hidden p-1">
+                <div className=" md:text-2xl flex flex-col gap-3 text-center place-items-center m-0">
+                    <h3  className="text-[1.5rem] md:text-[2rem] xl:text-[2.5rem] font-bold ">Construyendo Un Futuro Deportivo Brillante</h3>
+                        <p className="w-[90%] text-center text-[18px] text-gray-600">Juntos, podemos crear un deporte universitario más vibrante y lleno de vida.
+                            <span className="text-univita text-[19px]"> Tu voz </span>es la energía que mueve este proyecto
+                        </p>
                 </div>
 
-                <div className="relative overflow-hidden group w-full">
-                    <div className=" flex p-2 gap-5 animate-scroll-rigth flex-shrink-0">
-                           {duplicatedComments.map((coment, index) => (
+                {/*aplicar  group a esta etiqueta para desbanecer comentarios con hover */}
+                    <div className=" flex flex-col xl:flex-row p-4 gap-5">
+                           {coments.slice(0,3).map((coment, index) => (
                             <ComentCard 
                                 key={index} 
                                 coment={coment} 
@@ -24,14 +26,11 @@ import { coments } from "@/types/comentarios";
                             />
                         ))}
                     </div>
-                </div>
                 
             </section>
-            <div className="btComen">
-                {/*deja tu comentario*/}
+            <div className="btComen place-items-center ">
                 <Btcomment/>
             </div>  
-            
         </section>
     )
  }

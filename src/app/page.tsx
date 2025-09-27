@@ -25,11 +25,10 @@ export default function Home() {
             <div className="features">
               <Features/>
             </div>
-            <div className="Univita">
+            <div className="Univita m-0">
               <Univita/>
             </div>
-            <div className=" p-3 ">
-              {/*apartados del modulo, su funcion es que las personas exploren las funcionalidades*/}
+            <div className="Coments p-3 bg-[#eee8e8] ">
               <Comentsection/>
             </div>
             

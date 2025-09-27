@@ -5,7 +5,7 @@ import {pago} from "@/types/headerSection";
 import Accordeon from "@/components/common/accordionMH"
 import React, {useState} from "react";
 import Image from "next/image";
-
+import {ActiveLink} from "@/components/ui/Router";
 import MenuDropdown from "@/components/common/menuDropdown";
 
 function Header(){
@@ -60,7 +60,9 @@ let date: Date=new Date();
 
               {/*LOGO unimar*/}
               <div className="grid place-items-center xl:justify-items-normal ">
+                <ActiveLink href="/">
                 <img src="logounimar-25-aniversario.png" alt="logo unimar" className="w-2/3 md:w-xl  xl:ml-12"/>              
+                </ActiveLink>
               </div>
 
               {/*menu panel*/}

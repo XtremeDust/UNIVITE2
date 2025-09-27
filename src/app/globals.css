@@ -5,6 +5,7 @@
   --foreground: #171717;
   --color-unimar: #0d4e98;
   --color-trasparent-unimar: #0f335c3a;  
+  --color-univita:#000EA1;
 }
 
 @theme inline {
@@ -14,6 +15,7 @@
   --font-mono: var(--font-geist-mono);
   --color-unimar: var(--color-unimar);
   --color-trasparent-unimar: var(--color-trasparent-unimar);  
+  --color-univita: var(--color-univita);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -94,6 +96,39 @@ body {
   }  
 }
 
+
+@keyframes gradient-fade {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.color-gradient-animation::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: linear-gradient(
+    to bottom right,
+    #0d3463,
+    #1d4ed8,
+    #064ed4
+  ); 
+  animation: gradient-fade 10s ease infinite;
+
+}
+
+
+.btn{
+  @apply rounded-md transition-all duration-300  px-4 py-2
+}
+
 .btn-primary{
   @apply text-[18px] text-white lg:text-[20px] rounded-xl transition-all duration-300 hover:scale-105 bg-unimar py-2 px-4
 }
@@ -106,10 +141,22 @@ body {
   @apply text-[13px] text-white  transition-all duration-300 hover:scale-105 hover:bg-red-500 hover:opacity-100 opacity-50 bg-red-600 px-2.5 py-1
 }
 
+.btn-back{
+  @apply text-[1.3rem] rounded-full size-[2rem] text-gray-600 transition-all duration-300 hover:scale-105 hover:bg-gray-400 hover:text-white
+}
+
 .input-text{
   @apply focus:ring-[1px] focus:ring-unimar focus:outline-none ring ring-gray-200  shadow-md bg-white rounded-md items-start
 }
 
+.input{
+  @apply focus:ring-[1px] focus:ring-unimar focus:outline-none ring ring-gray-400 drop-shadow-2xl rounded-[6px]
+}
+
 .card-small{
   @apply w-sm sm:w-9/12 md:w-5/11 xl:w-[18rem]  
+}
+
+.title{
+   @apply text-[1.5rem] md:text-[2rem] xl:text-[2.5rem] font-bold
 }

@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation'
 export interface RouterProps{
     children:React.ReactNode;
     href:string;
-    className:string;
+    className?:string;
 }
 
 export function ActiveLink({ children, href, className,...props }:RouterProps) {

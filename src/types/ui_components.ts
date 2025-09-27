@@ -8,4 +8,3 @@ export {Input} from "@/components/ui/Input";
 export {InputGroup} from "@/components/ui/InputGroup";
 export {TextArea} from "@/components/ui/TextArea"
 export {Card} from "@/components/ui/Card";
-export {CardImg} from "@/components/ui/CardImg";
