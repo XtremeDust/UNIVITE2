@@ -7,7 +7,7 @@ export default function events(){
     return(
         <div className='grid grid-rows-[auto_1fr_auto] min-h-dvh bg-white'>
             <Header/>
-                <main className='bg-gray-50'>
+                <main className='bg-gray-100'>
                     <Banner/>
                     <Events/>
                 </main>

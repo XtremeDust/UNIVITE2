@@ -7,12 +7,12 @@ import {ActiveLink} from "@/components/ui/Router";
 
 export default function Univita() {
   return (
-    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-univita text-white lg:space-y-10'>
+    <div className='place-content-center w-full h-full place-items-center justify-evenly bg-unimar text-white lg:space-y-10'>
         <section className='Univita flex flex-col xl:flex-row place-items-center p-2 gap-5 mt-5'>
           <ActiveLink href='/login'>
             <Image
               className='bg-transparent w-sm sm:w-[21rem] h-[17rem] rounded-2xl overflow-hidden hover:scale-105 transition-all duration-500'
-              src={"https://res.cloudinary.com/dnfvfft3w/image/upload/v1758471006/logo_ev8dso.png"}
+              src={"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759018562/Gemini_Generated_Image_vt78q4vt78q4vt78_1__1_-removebg-preview_1_uwshiz.png"}
               alt='logo'
               width={700}
               height={700}
