@@ -8,7 +8,7 @@ export function Button ({children, className, variant, onClick,...props}:BtProps
     
     
     return(
-        <button className={`clase padre ${className} ${variant}`}
+        <button className={`${className} ${variant}`}
         onClick={onClick}
         {...props}
         >

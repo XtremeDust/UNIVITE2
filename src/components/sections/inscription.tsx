@@ -1,25 +1,24 @@
 'use client'
-import {Button, Modal,ContainModal,HeaderModal,Input,InputGroup,TextArea,FooterModal} from "@/types/ui_components";
+import {Button, Modal,ContainModal,HeaderModal,FooterModal, Card} from "@/types/ui_components";
 import Navigation from "@/components/common/navigation"
 import { useState } from "react";
 import Sports from "@/components/common/sportsCard"
-import {sports, catPredt} from "@/types/sports"
+import {sports, catPredt, pasos} from "@/types/sports"
 import Image from "next/image";
+import { motion } from "motion/react";
+import Banner from "@/components/ui/Banner";
 
 export function ButtonInscription(){
         const [OpenModal, setModal] = useState(false);
-    
         const handleOpenModal=()=>{
             setModal(true)  
               
         };
-    
         const handleCloseModal=()=>{
             setModal(false)    
         };
     
         const [isSport, setSport] = useState<number|null>(null);
-
         const handleClickSport=(id: number)=>{
             setSport(isSport === id ? (null): (id));
             if(isSport===id){
@@ -29,9 +28,7 @@ export function ButtonInscription(){
             }
         };
 
-
         const [SelectCat, setSelectCat] = useState<number|null>(null);
-        
         const handleCatChange = (id:number) => {
             setSelectCat(SelectCat === id ? null:id)    
         };
@@ -39,14 +36,87 @@ export function ButtonInscription(){
         const categoria = sports.find((c=> c.id === isSport));
         const enlistada = categoria?.categoria[0].id;
 
+         const [isHovered, setIsHovered] = useState(false);
+        const iconMove = {
+            initial: { rotate: 0},
+            hover: { 
+                rotate: [65,0,180,70],
+            },
+        };
+
     return(
         <>
+            <Banner
+                SRC="https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg"
+                ALT="banner"
+            >
+                <>
+                    <div className="absolute inset-0 z-10 backdrop-blur-md bg-black/40"/>
+                    <section className="flex flex-col space-y-1 absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <h2 className=" title text-center  font-bold">Inscríbete en tus eventos deportivos</h2>
+                        <div className="gap-5 flex flex-col items-center justify-center size-full">
+                            <p className=" text-lg text-center w-[75%]">Tu pasión por el deporte ahora está a un clic de distancia. Inscribrete de manera rápida y secilla.</p>
+                            <Button className="btn-primary h-[3rem] xl:h-[4rem] flex place-items-center group not-hover:gap-0 hover:gap-3 transition-all"
+                                onClick={handleOpenModal} 
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                            >
+                                ¡Quiero inscribirme!
+                                <motion.div className="m-0 group-hover:w-6 h-full relative"
+                                    variants={iconMove}
+                                    animate={isHovered?'hover':'inicial'}
+                                >
+                                    <Image
+                                        src={'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759090778/seleccion_wlilfg.png'}
+                                        alt="pointer"
+                                        layout="fill"
+                                        objectFit="contain"
+                                    />
+                                </motion.div>    
+                            </Button>
+                        </div>
+                    </section>
+                </>
+            </Banner>
+
             <section className=" flex flex-col p-5 space-y-10 ">
-                <h2 className=" text-3xl lg:text-justify text-center text-black">Ahora puedes inscribirte en tus eventos deportivos desde el portal web de la universidad.</h2>
-                    <div className="gap-5 flex flex-col lg:flex-row lg:justify-around items-center justify-center size-full">
-                        <p className="text-black ml-5 text-lg text-center lg:text-justify w-[75%]">¡Tu pasión por el deporte ahora está a un clic de distancia! En Univita, sabemos que tu tiempo es valioso y tu energía es para darlo todo en la cancha. Por eso, hemos optimizado nuestro sistema de registro. Ahora puedes inscribirte en tus eventos deportivos favoritos de manera rápida y sencilla, directamente desde tu teléfono o computadora.</p>
-                        <Button onClick={handleOpenModal} className="btn-primary h-[4rem] xl:h-[4rem]   2xl:w-[15%]">¡Quiero inscribirme!</Button>
+                <section className="flex flex-col p-3 space-y-12 text-black place-content-center place-items-center text-center m-0">
+                    <div className="mb-5 place-content-center place-items-center">
+                        <h3 className='title text-gray-800'>Optimiza tu Tiempo, Maximiza tu Energía</h3>
+                        <p className="text-sm md:text-lg w-sm text-gray-600 text-center">Nuestro proceso de Inscripción esta diseñado para que dediques menos tiempo al papeleo y más a lo que amas: competir y entrenar</p>
                     </div>
+                     
+                     <div className=" flex flex-col lg:flex-row w-full justify-evenly gap-3">
+                        {pasos.map((en)=>(
+                            <Card key={en.id} 
+                                className="block place-items-center place-content-center text-center gap-3 m-0">
+                                <motion.div
+                                    className=" place-items-center"
+                                    animate={{scale:0.9}}
+                                    whileHover={{scale:1.0}}
+                                    transition={{
+                                        duration:0.3,
+                                        ease:"easeInOut",
+                                    }}
+                                >
+                                     <div className=" ring-blue-300 ring-8 p-4 bg-univita bg mb-4 w-[9rem] rounded-full overflow-hidden">
+                                        <Image
+                                            className=" transition-all duration-300 ease-in-out p-2 md:p-0 scale-70"
+                                            src={en.img}
+                                            alt={en.paso}
+                                            width={200}
+                                            height={200}
+                                        />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-bold text-gray-900">{en.id}.{en.paso}</h3>
+                                        <p className="text-sm md:text-lg text-gray-600 w-sm">{en.content}</p>
+                                    </div>
+                                </motion.div>
+                            </Card>
+                        ))}
+                     </div>
+                </section>
                 <Navigation/>
             </section>
 

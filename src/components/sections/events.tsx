@@ -1,11 +1,22 @@
 'use client'
+import { motion, scale } from "motion/react";
 import { Card } from "@/types/ui_components";
 import Image from "next/image";
 import Navigation from "@/components/common/navigation"
 import {Button, Input} from "@/types/ui_components";
 import {eventos} from "@/types/eventos"
+import { useState } from "react";
+
 
 export default function Events(){
+
+ const [isHovered, setIsHovered] = useState(false);
+     const iconMove = {
+        initial: { rotate: 0},
+        hover: { 
+            rotate: [0,45,-45,0], scale:[0.8,0.9,0.8]
+        },
+    };
     return(
         <div className="space-y-3 mb-4">
             <section className="text-events flex flex-col text-center place-items-center mt-6 md:mt-3">
@@ -26,7 +37,7 @@ export default function Events(){
                                {card.estado}
                             </div>
                             <Image
-                                className="bg-gray-200"
+                                className="absolute bg-gray-200"
                                 src={card.img}
                                 alt="img"
                                 layout="fill" 
@@ -44,25 +55,55 @@ export default function Events(){
                 
              </section>
 
-            <section className="relative text-events flex flex-col text-center place-items-center mt-6 md:mt-3 space-y-2 h-98 place-content-center">
-                
+            <section className="notificar p-2">
+                <motion.div className="relative text-events flex flex-col text-center place-items-center mt-6 md:mt-3 space-y-4 h-94  place-content-center rounded-xl"
+                    animate={{
+                        backgroundColor:['#0d4564','#0d4e90','#0d4564'],
+                    }}
+                    transition={{
+                            duration:3,
+                            ease:"linear",
+                            repeat:Infinity
+                    }}
+                >
 
-                <div className="z-10">
-                    <h3  className="title text-black">¿Listo para la competencia?</h3>
-                    <p className="w-[95%] text-center text-[18px] text-gray-600">
-                        Se el primero en enterarte de los proximos campeonatos, recibe notificaciones sobre las proximas inscripciones
-                    </p>
-                </div>
+                    <div className="z-10 place-items-center space-y-1">
+                        <h3  className="title ">¡No te quedes en la banca!</h3>
+                        <p className="w-[95%] xl:w-[80%] text-center text-[18px] ">
+                        El próximo evento está a la vuelta de la esquina. Se el primero en enterarte de las inscripciones, noticias exclusivas y los detalles de los eventos
+                        </p>
+                    </div>
 
-                <div className="z-10 relative bg-white rounded-lg shadow-2xl mt-3 py-6 lg:py-6.5 w-9/10 sm:w-sm md:w-md lg:w-[26rem] ">
-                        <Input type="email" placeholder="example.0123@unimar.edu.ve" className="absolute z-10 top-0 inset-0 input text-sm md:text-md lg:text-lg text-black rounded-lg sm:pl-5 pr-22.5 sm:pr-33"/>
-                        <Button className="absolute cursor-pointer z-10 right-1 top-1.5 lg:top-1 bg-unimar text-sm md:text-lg lg:text-lg px-3 sm:px-6 py-2 rounded-lg hover:opacity-95 hover:scale-102 transition-all duration-300">
-                           Notificar
-                        </Button>
-                </div>
-                
-                
-            </section>   
+                    <div className="z-10 relative bg-white rounded-lg shadow-2xl mt-3 py-6 lg:py-6.5 w-9/10 sm:w-sm md:w-md lg:w-[26rem] ">
+                            <Input type="email" placeholder="example.0123@unimar.edu.ve" className="absolute z-10 top-0 inset-0 text-sm md:text-md lg:text-lg text-black rounded-lg sm:pl-5 pr-22.5 sm:pr-33 focus:ring-[1px] ring ring-univita focus:ring-gray-700 focus:outline-none"/>
+                            <Button className="absolute contain flex gap-2 cursor-pointer font-semibold z-10 right-1 top-[3px]  bg-unimar text-sm md:text-[15px] px-1 sm:px-2.5 py-2 lg:py-2.5 rounded-lg hover:opacity-95 transition-all duration-300 place-items-center"
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                            >
+                                <motion.div 
+                                    variants={iconMove}
+                                    animate={isHovered===true ? "hover" : "initial"}
+                                    transition={isHovered?{
+                                        duration:1,
+                                        ease:"linear",
+                                        repeat:Infinity
+                                    }:{}}
+                                >
+                                    <Image
+                                        src={'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759070639/el-sonar_cgjz7t.png'}
+                                        alt="notificacion"
+                                        height={10}
+                                        width={26}
+                                        objectFit="contain"
+                                    />
+                                </motion.div >
+                                Notificarme
+                            </Button>
+                    </div>
+                    
+                </motion.div>   
+            </section>
+
              <Navigation/>
         </div>
     );

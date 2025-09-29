@@ -2,10 +2,11 @@ import Image from "next/image";
 
 export interface IMGProps{
     SRC:string,
-    ALT:string
+    ALT:string,
+    children?:React.ReactElement;
 }
 
-  export default function Banner({SRC, ALT, ...props}:IMGProps){
+  export function Banner({SRC, ALT, children ,...props}:IMGProps){
     return(
         <div className=" relative w-full aspect-video sm:h-80 md:h-96 overflow-hidden bg-gray-400 ">   
             <Image 
@@ -13,7 +14,10 @@ export interface IMGProps{
                 {...props}
                 src={SRC}
                 alt={ALT}
+                layout="fill" 
+                objectFit="cover"
             />
+            {children}
         </div>
     );
-  }
+  }export default Banner

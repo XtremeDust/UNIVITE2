@@ -5,6 +5,9 @@ import { useState } from "react";
 import SportInfo from "./sportinfo"
 import Navigation from "@/components/common/navigation"
 import React from "react";
+import {Card, Button} from "@/types/ui_components";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 export function Sport(){
 
@@ -12,19 +15,73 @@ export function Sport(){
     const handleClickSport=(id: number)=>{
         setSport(isSport === id ? null:id);
     };
-    const CardA = sports.find(c=> c.id === isSport);
+    const Normas = sports.find(c=> c.id === isSport);
+
+    const [isHovered, setIsHovered] = useState<number|null>(null);
+        const handleHovered=(id: number)=>{
+        setIsHovered(isHovered === id ? null:id);
+    };
+    const iconMove = {
+        initial: { rotate: -90},
+        click: { 
+            rotate: 90,
+        },
+        hover:{
+            rotate:25,
+        }
+    };
 
     return(
         <>
-            <div className=" text-[20px] md:text-3xl text-black font-medium flex flex-col gap-1 px-5">
-                <h2 className="lg:text-4xl font-mono">Normativas, guias y reglamentos</h2>
-                <span className="ml-5 text-justify text-[16px] md:text-[18px]">
+            <section className="encabezado text-black flex flex-col gap-1 px-5 text-center">
+                <h2 className="title">Normativas, guias y reglamentos</h2>
+                <span className="text-sm md:text-lg">
                     Toda gran experiencia deportiva y cultural se construye sobre bases sólidas. Aquí podrás consultar las normativas, guías y reglamentos que orientan nuestra comunidad, asegurando un entorno justo, organizado y transparente donde cada participación suma al espíritu universitario.
                 </span>
-            </div>
+            </section>
 
-            <div className="place-items-center place-content-center px-2 py-2 flex flex-wrap gap-2 sm:gap-3 md:gap-5 ">
-                {sports.map((card)=>(
+            <section className="Cartas place-items-center place-content-center px-6 py-2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-5 ">
+                {sports.map((norma)=>(
+                    <React.Fragment  key={norma.id}>
+                        <Card className={`relative w-full md:max-w-md lg:max-w-lg xl:max-w-lg 2xl:max-w-xl cursor-pointer rounded-lg overflow-hidden transform transition-all duration-300 ${isSport  === norma.id  ?'scale-104 bg-white shadow-blue-100 shadow-lg':' bg-white hover:scale-102 shadow-lg'}`}>
+                            <Button className='w-full flex items-center text-start p-2 px-3 cursor-pointer' onClick={()=>handleClickSport(norma.id)} onMouseEnter={() => handleHovered(norma.id)} onMouseLeave={() => handleHovered(norma.id)}>
+                                <div className="relative size-18 ring-4 rounded-full ring-sky-400 ">
+                                    <Image
+                                        src={norma.img}
+                                        alt="img"
+                                        width={100}
+                                        height={100}
+                                    />
+                                </div>
+                                <div className="flex flex-col flex-grow text-black px-6 py-4 space-y-1">
+                                    <h3 className="text-lg font-bold line-clamp-1">{norma.sport}</h3>
+                                    <p className=" line-clamp-2 text-gray-600 text-justify text-base">Consultar el reglamento</p>
+                                </div>
+                                <motion.div className="w-5 m-1 lg:mr-3 -rotate-90"
+                                     variants={iconMove}
+                                    animate={
+                                        isSport === norma.id?'click': (isHovered === norma.id?'hover':'inicial')
+                                     }
+                                >
+                                    <Image  
+                                        src={'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759101273/flecha-hacia-abajo-para-navegar_zixe1b.png'}
+                                        alt="flecha"
+                                        width={100}
+                                        height={100}
+                                    />
+                                </motion.div>
+                            </Button>
+                        </Card>
+                            <div className={`Informacion transition-all duration-300 place-content-center place-items-center ${Normas && isSport === norma.id ? ' max-h-screen opacity-100 block  md:hidden p-4':'max-h-0 opacity-0 md:hidden'}`}>
+                                 { Normas &&(
+                                    <SportInfo
+                                    card={norma}
+                                    />
+                                )}
+                            </div>  
+                    </React.Fragment>
+                ))}
+                {/*{sports.map((card)=>(
                    <React.Fragment key={card.id}>
                         <Sports 
                             key={card.id}
@@ -34,22 +91,24 @@ export function Sport(){
                             onClick={()=>handleClickSport(card.id)}
                         />
 
-                        <div className={` transition-all duration-500 place-content-center place-items-center ${CardA && isSport === card.id ? ' max-h-screen opacity-100 block  md:hidden p-4':'max-h-0 opacity-0 md:hidden'}`}>
+                        <div className={`Informacion transition-all duration-500 place-content-center place-items-center ${CardA && isSport === card.id ? ' max-h-screen opacity-100 block  md:hidden p-4':'max-h-0 opacity-0 md:hidden'}`}>
                             <SportInfo
                                 card={card}
                             />
                         </div>
                     </React.Fragment>
-                ))}
-            </div>
+                ))}*/}
+            </section>
+            
+                <section className={` transition-all place-content-center place-items-center duration-700 linear ${Normas ? ' max-h-screen opacity-100 hidden md:block p-4':'hidden md:block max-h-0 opacity-0'}`}>
+                    { Normas &&(
+                        <SportInfo
+                        card={Normas}
+                        />
+                    )}
+                </section>
+            
 
-            <div className={` transition-all place-content-center place-items-center duration-700 ease-in-out ${CardA ? ' max-h-screen opacity-100 hidden md:block':'hidden md:block max-h-0 opacity-0'}`}>
-                { CardA &&(
-                    <SportInfo
-                    card={CardA}
-                    />
-                )}
-            </div>
 
             <Navigation/>  
         </>

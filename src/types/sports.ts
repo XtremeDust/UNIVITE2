@@ -12,6 +12,12 @@ export interface categoria{
     category:string;
 }
 
+export const pasos=[
+    {id:1,paso:"Selecciona tu Evento", content:"Elige el deporte que te apaciona y la categoria en la que quieres participar.", img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759086427/seleccione_1_r0ezsw.png"},
+    {id:2,paso:"Completa tus Datos", content:"Llena el formulario con la información necesaria para el registro.", img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759086426/formularios-de-google_x5vgjo.png"},
+    {id:3,paso:"Envia y ¡Listo!", content:"Realiza el envio, espera confirmacion y prepárate para competir", img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759086427/seleccione_ftz82y.png"},
+]
+
 export const catPredt=[
     {id:1,category:'Masculina', img:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758857071/Group_381_rnpdb0.png'},
     {id:2,category:'Femenina', img:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758857070/Group_380_mr3n9u.png'},

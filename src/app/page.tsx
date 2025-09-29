@@ -1,11 +1,11 @@
-import { Inconsolata, Literata } from "next/font/google";
 import Image from "next/image";
 import Header from "@/components/common/MainHeader";
 import Footer from "@/components/common/MainFooter";
-import Banner from "@/components/sections/banner";
+import {Banner} from "@/types/ui_components";
 import Features from "@/components/sections/featuresSection";
 import Comentsection from "@/components/sections/comentSection";
 import Univita from "@/components/sections/Univita";
+
 
 
 export default function Home() {
@@ -19,8 +19,8 @@ export default function Home() {
       
       {/*content*/}
       <main className="bg-gray-50 text-black space-y-5">          
-            <div className="Hero Banner">
-            <Banner/>
+            <div className="Hero Banner"> 
+            <Banner SRC="https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg" ALT="banner"></Banner>
             </div>
             <div className="features">
               <Features/>

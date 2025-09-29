@@ -96,6 +96,22 @@ body {
   }  
 }
 
+@keyframes notification-rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(45deg);
+  }
+  75%{
+    transform: rotate(-45deg);
+  }
+
+}
+
+.rotate-animation{
+  animation: notification-rotate 5s ease infinite;
+}
 
 @keyframes gradient-fade {
   0% {

@@ -7,10 +7,10 @@ import { useState } from "react";
 export default function Login(){
 
     const [isType, setType] = useState('password');
-
     const handleChance =()=>(
         setType(isType==='password'? 'text':'password')
     )
+
     return(
         <div className="relative bg-gradient-to-tl from-bg-unimar via-sky-900 to-cyan-600 color-gradient-animation  p-1 gap-1 sm:p-5 min-h-screen flex flex-col">
             <div className="absolute inset-0 z-10 backdrop-blur-sm bg-black/50"></div>
