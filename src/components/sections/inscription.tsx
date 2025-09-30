@@ -9,6 +9,7 @@ import { motion } from "motion/react";
 import Banner from "@/components/ui/Banner";
 
 export function ButtonInscription(){
+    
         const [OpenModal, setModal] = useState(false);
         const handleOpenModal=()=>{
             setModal(true)  
@@ -18,6 +19,9 @@ export function ButtonInscription(){
             setModal(false)    
         };
     
+
+
+
         const [isSport, setSport] = useState<number|null>(null);
         const handleClickSport=(id: number)=>{
             setSport(isSport === id ? (null): (id));
@@ -35,6 +39,9 @@ export function ButtonInscription(){
         
         const categoria = sports.find((c=> c.id === isSport));
         const enlistada = categoria?.categoria[0].id;
+
+
+
 
          const [isHovered, setIsHovered] = useState(false);
         const iconMove = {

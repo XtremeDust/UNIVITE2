@@ -1,5 +1,5 @@
 'use client'
-import { motion, scale } from "motion/react";
+import { motion } from "motion/react";
 import { Card } from "@/types/ui_components";
 import Image from "next/image";
 import Navigation from "@/components/common/navigation"
