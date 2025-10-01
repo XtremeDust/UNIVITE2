@@ -13,7 +13,7 @@ const deport = [
     {
         id: 1,
         title: 'Fútbol Sala',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759284280/Copilot_20250930_220402_vgzud9.png',
         descrip: 'Deporte de equipo dinámico y de ritmo rápido, una variante del fútbol que se juega en una cancha dura y más pequeña. Se caracteriza por su énfasis en el control del balón, la técnica y la toma rápida de decisiones, lo que lo convierte en un deporte emocionante y desafiante para jugadores de todos los niveles.',
         content: `
             Equipamiento: Cancha cubierta, balón de fútbol sala, porterías, camisetas de equipo, guantes de portero.
@@ -26,7 +26,7 @@ const deport = [
     {
         id: 2,
         title: 'Básquetbol',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759284625/Copilot_20250930_220959_wjpnk7.png',
         descrip: 'Un deporte de equipo de ritmo rápido que exige habilidad, agilidad y trabajo en equipo. Los jugadores buscan encestar un balón en una canasta elevada para anotar puntos.',
         content: `
             Equipamiento: Cancha de baloncesto, aro, balón.
@@ -39,7 +39,7 @@ const deport = [
     {
         id: 3,
         title: 'Voleibol',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759284988/Copilot_20250930_221605_ghc2vh.png',
         descrip: 'Deporte de red y balón en el que dos equipos de seis jugadores se enfrentan en un campo dividido por una red. El objetivo es pasar el balón por encima de la red para que caiga en el campo contrario.',
         content: `
             Equipamiento: Red, balón de voleibol, cancha.
@@ -52,7 +52,7 @@ const deport = [
     {
         id: 4,
         title: 'Béisbol 5',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759285152/Copilot_20250930_221834_jnzebo.png',
         descrip: 'Una versión simplificada del béisbol y el sóftbol, ideal para espacios reducidos. Se juega con cinco jugadores por equipo y sin bate ni guantes, haciendo del deporte más accesible.',
         content: `
             Equipamiento: Pelota de goma, base.
@@ -65,7 +65,7 @@ const deport = [
     {
         id: 5,
         title: 'Tenis de Mesa',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759285354/Copilot_20250930_222225_m97fmu.png',
         descrip: 'Deporte de raqueta y pelota en el que dos o cuatro jugadores golpean una pelota ligera de un lado a otro sobre una mesa dividida por una red. Exige rapidez, reflejos y concentración.',
         content: `
             Equipamiento: Paletas, pelota de tenis de mesa, mesa con red.
@@ -78,7 +78,7 @@ const deport = [
     {
         id: 6,
         title: 'Kickingball',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759285576/Copilot_20250930_222557_p5l3ux.png',
         descrip: 'Similar al béisbol, pero los jugadores patean una pelota grande en lugar de golpearla con un bate. Es un deporte popular que combina habilidades de fútbol y béisbol.',
         content: `
             Equipamiento: Pelota de goma grande, bases.
@@ -91,7 +91,7 @@ const deport = [
     {
         id: 7,
         title: 'Karate-Do',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759285806/Copilot_20250930_222948_joqoag.png',
         descrip: 'Un arte marcial japonés que se centra en el desarrollo de la autodefensa y el autocontrol. Combina técnicas de golpes con las manos y los pies, con un fuerte énfasis en la disciplina y el desarrollo del carácter.',
         content: `
             Equipamiento: Uniforme (Karategi), cinturón, protectores (opcional).
@@ -104,7 +104,7 @@ const deport = [
     {
         id: 8,
         title: 'Softbol',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759285866/Copilot_20250930_223053_rodqne.png',
         descrip: 'Un deporte de equipo similar al béisbol, pero que se juega con una pelota más grande y un campo más pequeño. Es un deporte de ritmo rápido y exigente que requiere precisión, fuerza y agilidad.',
         content: `
             Equipamiento: Pelota más grande que la de béisbol, guantes, bate, bases.
@@ -117,7 +117,7 @@ const deport = [
     {
         id: 9,
         title: 'Pickleball',
-        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1758470460/Lucid_Origin_A_dynamic_wideformat_cinematic_photo_in_the_style_0_qx2poq.jpg',
+        src: 'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759286504/Copilot_20250930_223930_cxpou4.png',
         descrip: 'Un deporte de raqueta que combina elementos del tenis, bádminton y tenis de mesa. Se juega en una cancha de bádminton con una red modificada y una pelota de plástico perforada, lo que lo hace muy accesible para todas las edades.',
         content: `
             Equipamiento: Paletas de pickleball, pelota de plástico perforada, cancha con red.

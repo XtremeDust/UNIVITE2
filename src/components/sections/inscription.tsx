@@ -60,9 +60,9 @@ export function ButtonInscription(){
                 <>
                     <div className="absolute inset-0 z-10 backdrop-blur-md bg-black/40"/>
                     <section className="flex flex-col space-y-1 absolute z-20 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                        <h2 className=" title text-center  font-bold">Inscríbete en tus eventos deportivos</h2>
+                        <h2 className="sm:text-[1.3rem] title text-center font-bold">Inscríbete en tus eventos deportivos</h2>
                         <div className="gap-5 flex flex-col items-center justify-center size-full">
-                            <p className=" text-lg text-center w-[75%]">Tu pasión por el deporte ahora está a un clic de distancia. Inscribrete de manera rápida y secilla.</p>
+                            <p className=" text-sm md:text-lg text-center w-sm sm:w-[75%]">Tu pasión por el deporte ahora está a un clic de distancia. Inscribrete de manera rápida y secilla.</p>
                             <Button className="btn-primary h-[3rem] xl:h-[4rem] flex place-items-center group not-hover:gap-0 hover:gap-3 transition-all"
                                 onClick={handleOpenModal} 
                                 onMouseEnter={() => setIsHovered(true)}
