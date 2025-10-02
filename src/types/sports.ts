@@ -116,3 +116,25 @@ export const sports=[
         ],
     }
 ]
+
+export const equipos=[
+    {id:1,nombre:'Equipo ',img:'/'},
+    {id:2,nombre:'Equipo ',img:'/'},
+    {id:3,nombre:'Equipo ',img:'/'},
+    {id:4,nombre:'Equipo ',img:'/'},
+    {id:5,nombre:'Equipo ',img:'/'},
+    {id:6,nombre:'Equipo ',img:'/'},
+    {id:7,nombre:'Equipo ',img:'/'},
+    {id:8,nombre:'Equipo ',img:'/'},
+    {id:9,nombre:'Equipo ',img:'/'},
+    {id:10,nombre:'Equipo ',img:'/'},
+]
+
+export const partidos=[
+    {id:1,equipo1:'Equipo 1',img1:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png',macador1:'0', equipo2:'Equipo 2',img2:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png', marcador2:'0', fecha:'00/00/0000', estado:'En vivo'},
+    {id:2,equipo1:'Equipo 3',img1:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png',macador1:'0', equipo2:'Equipo 4',img2:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png', marcador2:'0', fecha:'00/00/0000', estado:'Proximo'},
+    {id:3,equipo1:'Equipo 5',img1:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png',macador1:'0', equipo2:'Equipo 6',img2:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png', marcador2:'0', fecha:'00/00/0000', estado:'Finalizado'},
+    {id:4,equipo1:'Equipo 7',img1:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png',macador1:'0', equipo2:'Equipo 8',img2:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png', marcador2:'0', fecha:'00/00/0000', estado:'Proximo'},
+    {id:5,equipo1:'Equipo 9',img1:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png',macador1:'0', equipo2:'Equipo 10',img2:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png', marcador2:'0', fecha:'00/00/0000', estado:'Finalizado'},
+    {id:6,equipo1:'Equipo 11',img1:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png',macador1:'0', equipo2:'Equipo 12',img2:'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759361303/escudo_kz6svs.png', marcador2:'0', fecha:'00/00/0000', estado:'Finalizado'}
+]

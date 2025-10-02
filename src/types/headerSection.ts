@@ -4,7 +4,7 @@ export const pago = [
   id:1,
   red:"pagos unimar",
   Url:"",
-  icon:"online-payments-vertical.png",
+  icon:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759370231/login-vertical_chy2iu.png",
   size:"w-28"
   }
 ]

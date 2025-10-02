@@ -5,14 +5,14 @@ export const featS =[
         title:"Descubre",   
         text:"En esta seccion podras saber todo sobre los eventos deportivos",
         src:"er",
-        img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1756863195/descubrir_y45abc.png"
+        img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759348612/descubrir_jcnj8z.png"
     },
     {
         id:2,
         title:"Inscribete",   
         text:"Ahora las incripciones a los eventos deportivos y culturales los puedes hacer desde tu dispositivo",
         src:"er",
-        img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1756862775/acuerdo_yjsxzh.png"
+        img:"https://res.cloudinary.com/dnfvfft3w/image/upload/v1759348612/acuerdo_neb4rh.png"
     },
     {
         id:3,

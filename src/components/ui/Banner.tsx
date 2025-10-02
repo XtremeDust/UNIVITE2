@@ -14,8 +14,7 @@ export interface IMGProps{
                 {...props}
                 src={SRC}
                 alt={ALT}
-                layout="fill" 
-                objectFit="cover"
+                fill 
             />
             {children}
         </div>

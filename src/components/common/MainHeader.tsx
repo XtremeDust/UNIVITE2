@@ -48,8 +48,8 @@ let date: Date=new Date();
 
             {/*icono derecho*/}
             <div className="grid col-4">
-              <a href="" className="w-28">
-                <img src="login-vertical.png" alt="login" className="h-full" />
+              <a href="" className="w-28 justify-center">
+                <img src="https://res.cloudinary.com/dnfvfft3w/image/upload/v1759370231/online-payments-vertical_k6hpfe.png" alt="login" className="h-full" />
               </a>
             </div>
           </div>
@@ -61,7 +61,7 @@ let date: Date=new Date();
               {/*LOGO unimar*/}
               <div className="grid place-items-center xl:justify-items-normal ">
                 <ActiveLink href="/">
-                <img src="logounimar-25-aniversario.png" alt="logo unimar" className="w-2/3 md:w-xl  xl:ml-12"/>              
+                <img src="https://res.cloudinary.com/dnfvfft3w/image/upload/v1759370231/logounimar-25-aniversario_lmjwkc.png" alt="logo unimar" className="w-2/3 md:w-xl  xl:ml-12"/>              
                 </ActiveLink>
               </div>
 
@@ -74,7 +74,7 @@ let date: Date=new Date();
 
             {/*button menu mobile*/}
             <button className="md:hidden cursor-pointer justify-start" onClick={()=>setOpenMenu(!isOpenMenu)}>
-              <img src="bars-solid-full.svg" alt="menu" className=" size-8"/>
+              <img src="https://res.cloudinary.com/dnfvfft3w/image/upload/v1759370748/bars-solid-full_uksvau.svg" alt="menu" className=" size-8"/>
             </button>
 
           </div>

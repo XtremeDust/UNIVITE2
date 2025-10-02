@@ -1,11 +1,11 @@
 'use client'
 import { motion } from "motion/react";
-import { Card } from "@/types/ui_components";
 import Image from "next/image";
 import Navigation from "@/components/common/navigation"
-import {Button, Input} from "@/types/ui_components";
+import {Button, Input, Card} from "@/types/ui_components";
 import {eventos} from "@/types/eventos"
 import { useState } from "react";
+import {ActiveLink} from "@/components/ui/Router";
 
 
 export default function Events(){
@@ -21,38 +21,36 @@ export default function Events(){
         <div className="space-y-3 mb-4">
             <section className="text-events flex flex-col text-center place-items-center mt-6 md:mt-3">
                 <h3  className="title text-black">Campeonatos y Eventos Deportivos</h3>
-                <p className="w-[90%] text-center text-[18px] text-gray-600">Desde aquí, puedes navegar hacia los detalles de cada gran evento
+                <p className="w-[90%] text-center text-[18px] text-gray-600">Mantente informado sobre los partidos y eventos deportivos
 
                 </p>
 
             </section>
 
              <section className="eventos p-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-                
                 {eventos.slice(0,4).map((card)=>(
-                    <Card key={card.id} className="relative bg-white max-w-sm cursor-pointer rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
-                        <div className="relative h-52 w-full">
-                            <div className={`absolute px-2 py-1 rounded-xl top-2 right-2 z-10 
-                                ${card.estado==='Activo'?'bg-green-500':(card.estado==='Finalizado'?'bg-red-500':'bg-orange-500')}`}>
-                               {card.estado}
+                    <ActiveLink key={card.id} href={`events/${card.id}`}>
+                        <Card  className="relative bg-white max-w-sm cursor-pointer rounded-lg overflow-hidden shadow-lg transform transition-transform duration-300 hover:scale-105">
+                            <div className="relative h-52 w-full">
+                                <div className={`absolute px-2 py-1 rounded-xl top-2 right-2 z-10 
+                                    ${card.estado==='Activo'?'bg-green-500':(card.estado==='Finalizado'?'bg-red-500':'bg-orange-500')}`}>
+                                {card.estado}
+                                </div>
+                                <Image
+                                    className="absolute object-cover bg-gray-200"
+                                    src={card.img}
+                                    alt="img"
+                                    fill
+                                />
                             </div>
-                            <Image
-                                className="absolute bg-gray-200"
-                                src={card.img}
-                                alt="img"
-                                layout="fill" 
-                                objectFit="cover"
-                            />
-                        </div>
-                        <div className="flex flex-col flex-grow text-black px-6 py-4 space-y-1">
-                            <h3 className="text-lg font-bold line-clamp-1">{card.title}</h3>
-                            <p className=" line-clamp-2 text-gray-600 text-justify text-base">{card.contenido}</p>
-                            <p className="text-center text-gray-8">{card.fecha}</p>
-                        </div>
-                    </Card>
+                            <div className="flex flex-col flex-grow text-black px-6 py-4 space-y-1">
+                                <h3 className="text-lg font-bold line-clamp-1">{card.title}</h3>
+                                <p className=" line-clamp-2 text-gray-600 text-justify text-base">{card.contenido}</p>
+                                <p className="text-center text-gray-8">{card.fecha}</p>
+                            </div>
+                        </Card>
+                    </ActiveLink>
                 ))}
-                
-                
              </section>
 
             <section className="notificar p-2">
@@ -90,11 +88,12 @@ export default function Events(){
                                     }:{}}
                                 >
                                     <Image
+                                        className="object-cover"
                                         src={'https://res.cloudinary.com/dnfvfft3w/image/upload/v1759070639/el-sonar_cgjz7t.png'}
                                         alt="notificacion"
                                         height={10}
                                         width={26}
-                                        objectFit="contain"
+                                        
                                     />
                                 </motion.div >
                                 Notificarme
